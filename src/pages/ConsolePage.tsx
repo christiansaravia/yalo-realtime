@@ -19,7 +19,7 @@ import { WavRecorder, WavStreamPlayer } from '../lib/wavtools/index.js';
 import { instructions } from '../utils/conversation_config.js';
 import { WavRenderer } from '../utils/wav_renderer';
 
-import { X, Edit, Zap, ArrowUp, ArrowDown } from 'react-feather';
+import { X, Edit, Zap, ArrowUp, ArrowDown, User } from 'react-feather';
 import { Button } from '../components/button/Button';
 import { Toggle } from '../components/toggle/Toggle';
 
@@ -479,19 +479,32 @@ export function ConsolePage() {
     <div data-component="ConsolePage">
       <div className="content-top">
         <div className="content-title">
-          <img src="/openai-logomark.svg" />
+          <img src="/yalo-logo.svg" alt="Yalo" />
           <span>realtime console</span>
         </div>
-        <div className="content-api-key">
-          {!LOCAL_RELAY_SERVER_URL && (
+        <div className="content-controls">
+          <Toggle
+            defaultValue={false}
+            labels={['manual', 'vad']}
+            values={['none', 'server_vad']}
+            onChange={(_, value) => changeTurnEndType(value)}
+          />
+          {isConnected && canPushToTalk && (
             <Button
-              icon={Edit}
-              iconPosition="end"
-              buttonStyle="flush"
-              label={`api key: ${apiKey.slice(0, 3)}...`}
-              onClick={() => resetAPIKey()}
+              label={isRecording ? 'release to send' : 'push to talk'}
+              buttonStyle={isRecording ? 'alert' : 'regular'}
+              disabled={!isConnected || !canPushToTalk}
+              onMouseDown={startRecording}
+              onMouseUp={stopRecording}
             />
           )}
+          <Button
+            label={isConnected ? 'disconnect' : 'connect'}
+            iconPosition={isConnected ? 'end' : 'start'}
+            icon={isConnected ? X : Zap}
+            buttonStyle={isConnected ? 'regular' : 'action'}
+            onClick={isConnected ? disconnectConversation : connectConversation}
+          />
         </div>
       </div>
       <div className="content-main">
@@ -634,38 +647,13 @@ export function ConsolePage() {
               })}
             </div>
           </div>
-          <div className="content-actions">
-            <Toggle
-              defaultValue={false}
-              labels={['manual', 'vad']}
-              values={['none', 'server_vad']}
-              onChange={(_, value) => changeTurnEndType(value)}
-            />
-            <div className="spacer" />
-            {isConnected && canPushToTalk && (
-              <Button
-                label={isRecording ? 'release to send' : 'push to talk'}
-                buttonStyle={isRecording ? 'alert' : 'regular'}
-                disabled={!isConnected || !canPushToTalk}
-                onMouseDown={startRecording}
-                onMouseUp={stopRecording}
-              />
-            )}
-            <div className="spacer" />
-            <Button
-              label={isConnected ? 'disconnect' : 'connect'}
-              iconPosition={isConnected ? 'end' : 'start'}
-              icon={isConnected ? X : Zap}
-              buttonStyle={isConnected ? 'regular' : 'action'}
-              onClick={
-                isConnected ? disconnectConversation : connectConversation
-              }
-            />
-          </div>
         </div>
         <div className="content-right">
           <div className="content-block kv">
-            <div className="content-block-title">set_memory()</div>
+            <div className="content-block-title">
+              <User size={16} style={{ marginRight: '8px' }} />
+              Customer Profile
+            </div>
             <div className="content-block-body content-kv">
               {JSON.stringify(memoryKv, null, 2)}
             </div>
