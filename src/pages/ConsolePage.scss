@@ -277,4 +277,55 @@
       }
     }
   }
+
+  .content-block.cart {
+    height: 250px;
+    max-height: 250px;
+    background-color: #ececf1;
+    margin-top: 24px;
+    
+    .content-block-body {
+      padding: 16px;
+      margin-top: 56px;
+    }
+
+    .empty-cart {
+      color: #666;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid #ddd;
+      
+      .cart-item-name {
+        .quantity {
+          display: inline-block;
+          background: #101010;
+          color: white;
+          padding: 2px 6px;
+          border-radius: 12px;
+          font-size: 0.9em;
+          margin-right: 8px;
+        }
+      }
+      
+      .cart-item-price {
+        font-weight: 500;
+      }
+    }
+
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 2px solid #101010;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+  }
 }
