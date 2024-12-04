@@ -101,6 +101,7 @@ export function ConsolePage() {
   const [isRecording, setIsRecording] = useState(false);
   const [memoryKv, setMemoryKv] = useState<{ [key: string]: any }>({});
   const [cartItems, setCartItems] = useState<{[key: string]: {name: string, price: number, quantity: number}}>({});
+  const [phoneNumber, setPhoneNumber] = useState<string>('');
 
   /**
    * Utility for formatting the timing of logs
@@ -426,6 +427,65 @@ export function ConsolePage() {
         };
       }
     );
+    client.addTool(
+      {
+        name: 'order_confirmed',
+        description: 'Confirms the order and sends notification',
+        parameters: {
+          type: 'object',
+          properties: {
+            phone: {
+              type: 'string', 
+              description: 'Phone number starting with + (e.g. +50246980100)',
+            }
+          },
+          required: ['phone']
+        }
+      },
+      async ({ phone }: { phone: string }) => {
+        // Use phoneNumber from state instead of passed parameter
+        const phoneToUse = phoneNumber || phone;
+        
+        // Remove + from phone number
+        const userId = phoneToUse.replace('+', '');
+        
+        // Get cart items and format them properly
+        const orderItems = Object.entries(cartItems)
+          .map(([_, item]) => ({
+            name: item.name,
+            quantity: item.quantity,
+            price: item.price
+          }));
+
+        const response = await fetch(
+          'https://api-global.yalochat.com/workflows/interpreter/v1/triggers/6744f85bb4022c2b1911f8bb/webhook?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhVlpnVzZ6d2RwSm5sN2NUaXhabmdYOTFWRjFkQ2xPeSJ9.F6GEAsIy_ER_YLQy8nlf4jTRL94fVO106jif5bXqpkI',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              userId: userId,
+              data: {
+                order_placed: orderItems
+              }
+            })
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error('Failed to confirm order');
+        }
+
+        // Clear cart after successful order
+        setCartItems({});
+        
+        return {
+          success: true,
+          message: `Order confirmed and notification sent to ${phoneToUse}`
+        };
+      }
+    );
 
     // handle realtime events from client + server for event logging
     client.on('realtime.event', (realtimeEvent: RealtimeEvent) => {
@@ -656,6 +716,21 @@ export function ConsolePage() {
             </div>
             <div className="content-block-body content-kv">
               {JSON.stringify(memoryKv, null, 2)}
+            </div>
+          </div>
+          <div className="content-block phone">
+            <div className="content-block-title">
+              <User size={16} style={{ marginRight: '8px' }} />
+              Phone Number
+            </div>
+            <div className="content-block-body">
+              <input
+                type="tel"
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
+                placeholder="+50246980100"
+                className="phone-input"
+              />
             </div>
           </div>
           <div className="content-block cart">

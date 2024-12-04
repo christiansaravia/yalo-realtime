@@ -399,4 +399,37 @@
       }
     }
   }
+
+  .content-block.phone {
+    margin-top: 16px;
+    background: #ffffff;
+    
+    .content-block-body {
+      padding: 20px;
+      display: flex;
+      gap: 8px;
+      
+      .phone-input {
+        flex: 1;
+      }
+    }
+
+    .phone-input {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: 'Assistant', sans-serif;
+      
+      &:focus {
+        outline: none;
+        border-color: #F4A261;
+      }
+      
+      &::placeholder {
+        color: #999;
+      }
+    }
+  }
 }
