@@ -449,13 +449,10 @@ export function ConsolePage() {
         // Remove + from phone number
         const userId = phoneToUse.replace('+', '');
         
-        // Get cart items and format them properly
+        // Get cart items and format them as a string
         const orderItems = Object.entries(cartItems)
-          .map(([_, item]) => ({
-            name: item.name,
-            quantity: item.quantity,
-            price: item.price
-          }));
+          .map(([_, item]) => `${item.quantity}x ${item.name} ($${item.price})`)
+          .join(', ');
 
         const response = await fetch(
           'https://api-global.yalochat.com/workflows/interpreter/v1/triggers/6744f85bb4022c2b1911f8bb/webhook?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhVlpnVzZ6d2RwSm5sN2NUaXhabmdYOTFWRjFkQ2xPeSJ9.F6GEAsIy_ER_YLQy8nlf4jTRL94fVO106jif5bXqpkI',
