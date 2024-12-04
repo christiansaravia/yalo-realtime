@@ -532,6 +532,18 @@ export function ConsolePage() {
     };
   }, []);
 
+  const submitPhoneNumber = useCallback(() => {
+    if (phoneNumber) {
+      const client = clientRef.current;
+      client.sendUserMessageContent([
+        {
+          type: 'input_text',
+          text: `My phone number is ${phoneNumber}`
+        }
+      ]);
+    }
+  }, [phoneNumber]);
+
   /**
    * Render the application
    */
@@ -730,6 +742,12 @@ export function ConsolePage() {
                 onChange={(e) => setPhoneNumber(e.target.value)}
                 placeholder="+50246980100"
                 className="phone-input"
+              />
+              <Button
+                label="Submit"
+                buttonStyle="action"
+                onClick={submitPhoneNumber}
+                disabled={!phoneNumber || !isConnected}
               />
             </div>
           </div>
