@@ -41,107 +41,159 @@ If user asks about VanguardIA 2025.
 Product Catalog:
 ["VA001"] = {
     name = "Blazer verde Comfort",
-    description = "Blazer slim fit confeccionado en tejido con viscosa. Cuello con solapas de muesca. Manga larga acabada en puño con detalle de botones. Bolsillo de vivo en el pecho y de solapa en la cadera. Detalle de bolsillo interior."
+    description = "Blazer slim fit confeccionado en tejido con viscosa. Cuello con solapas de muesca. Manga larga acabada en puño con detalle de botones. Bolsillo de vivo en el pecho y de solapa en la cadera. Detalle de bolsillo interior.",
+    price = 129.99,
+    brand = "Zara"
 },
 ["VA002"] = {
     name = "Blazer Traje 100 % Lino",
-    description = "Blazer straight fit confeccionado en tejido de lino. Cuello con solapas de muesca y manga larga acabada en puño con botones. Bolsillo de vivo en pecho y bolsillos de solapa en cadera. Detalle de bolsillo interior. Bajo con aberturas en espalda. Cierre frontal de botonadura."
+    description = "Blazer straight fit confeccionado en tejido de lino. Cuello con solapas de muesca y manga larga acabada en puño con botones. Bolsillo de vivo en pecho y bolsillos de solapa en cadera. Detalle de bolsillo interior. Bajo con aberturas en espalda. Cierre frontal de botonadura.",
+    price = 159.99,
+    brand = "Massimo Dutti"
 },
 ["VA003"] = {
     name = "Blazer Smoking Traje",
-    description = "Blazer straight fit. Cuello con solapas de pico y manga larga acabada en puño con botones. Bolsillos de vivo en cadera y detalle de bolsillo interior. Bajo con abertura central en espalda. Cierre frontal de botonadura."
+    description = "Blazer straight fit. Cuello con solapas de pico y manga larga acabada en puño con botones. Bolsillos de vivo en cadera y detalle de bolsillo interior. Bajo con abertura central en espalda. Cierre frontal de botonadura.",
+    price = 189.99,
+    brand = "Hugo Boss"
 },
 ["VA004"] = {
     name = "Blazer Fluido Traje",
-    description = "Blazer relaxed fit confeccionado en tejido con viscosa. Cuello con solapas de pico y manga larga. Bolsillos de solapa en cadera y detalle de bolsillo interior. Cierre frontal de botonadura cruzada."
+    description = "Blazer relaxed fit confeccionado en tejido con viscosa. Cuello con solapas de pico y manga larga. Bolsillos de solapa en cadera y detalle de bolsillo interior. Cierre frontal de botonadura cruzada.",
+    price = 139.99,
+    brand = "H&M"
 },
 ["VA005"] = {
     name = "Shorts Entrenamiento 2 en 1",
-    description = "Shorts de entrenamiento confeccionados con tejido técnico ligero y elástico. Malla interior. Diseñados para practicar cualquier deporte."
+    description = "Shorts de entrenamiento confeccionados con tejido técnico ligero y elástico. Malla interior. Diseñados para practicar cualquier deporte.",
+    price = 34.99,
+    brand = "Nike"
 },
 ["VA006"] = {
     name = "Short Salmon",
-    description = "Shorts de entrenamiento confeccionados con tejido técnico ligero y elástico. Malla interior. Diseñados para practicar cualquier deporte."
+    description = "Shorts de entrenamiento confeccionados con tejido técnico ligero y elástico. Malla interior. Diseñados para practicar cualquier deporte.",
+    price = 29.99,
+    brand = "Under Armour"
 },
 ["VA007"] = {
     name = "Shorts Entrenamiento Azul",
-    description = "Shorts de entrenamiento confeccionados con tejido técnico ligero y elástico. Malla interior. Diseñados para practicar cualquier deporte."
+    description = "Shorts de entrenamiento confeccionados con tejido técnico ligero y elástico. Malla interior. Diseñados para practicar cualquier deporte.",
+    price = 32.99,
+    brand = "Adidas"
 },
 ["VA008"] = {
     name = "Playera Entrenamiento Verde",
-    description = "Playera confeccionada en tejido técnico, ligero y elástico con estructura."
+    description = "Playera confeccionada en tejido técnico, ligero y elástico con estructura.",
+    price = 24.99,
+    brand = "Puma"
 },
 ["VA009"] = {
     name = "Playera Básica Gris",
-    description = "Playera confeccionada en tejido técnico, ligero y elástico."
+    description = "Playera confeccionada en tejido técnico, ligero y elástico.",
+    price = 19.99,
+    brand = "H&M"
 },
 ["VA010"] = {
     name = "Camisa 100 % Lino",
-    description = "Camisa relaxed fit confeccionada en tejido de lino. Cuello solapa y manga larga acabada en puño con botón. Cierre frontal de botonadura."
+    description = "Camisa relaxed fit confeccionada en tejido de lino. Cuello solapa y manga larga acabada en puño con botón. Cierre frontal de botonadura.",
+    price = 79.99,
+    brand = "Massimo Dutti"
 },
 ["VA011"] = {
     name = "Camisa Verde",
-    description = "Camisa relaxed fit confeccionada en tejido de algodón. Cuello abotonado y manga larga acaba en puño con botón. Cierre frontal de botonadura."
+    description = "Camisa relaxed fit confeccionada en tejido de algodón. Cuello abotonado y manga larga acaba en puño con botón. Cierre frontal de botonadura.",
+    price = 59.99,
+    brand = "Pull&Bear"
 },
 ["VA012"] = {
     name = "Camisa Azul",
-    description = "Camisa regular fit de cuello italiano y manga larga acabada en puño con botón. Cierre frontal de botonadura."
+    description = "Camisa regular fit de cuello italiano y manga larga acabada en puño con botón. Cierre frontal de botonadura.",
+    price = 54.99,
+    brand = "Uniqlo"
 },
 ["VA013"] = {
     name = "Camisa Cuadros",
-    description = "Camisa relaxed fit confeccionada en tejido de algodón con acabado franela. Cuello solapa y manga larga acabada en puño con botón. Bolsillos de plastrón en pecho. Cierre frontal de botonadura."
+    description = "Camisa relaxed fit confeccionada en tejido de algodón con acabado franela. Cuello solapa y manga larga acabada en puño con botón. Bolsillos de plastrón en pecho. Cierre frontal de botonadura.",
+    price = 64.99,
+    brand = "GAP"
 },
 ["VA014"] = {
     name = "Camisa Mezclilla Ligera",
-    description = "Camisa relaxed fit confeccionada en mezclilla ligero de algodón. Cuello solapa y manga larga acabada en puño con botón a presión. Bolsillos plastrón con solapa en pecho. Efecto lavado. Cierre frontal con botones a presión."
+    description = "Camisa relaxed fit confeccionada en mezclilla ligero de algodón. Cuello solapa y manga larga acabada en puño con botón a presión. Bolsillos plastrón con solapa en pecho. Efecto lavado. Cierre frontal con botones a presión.",
+    price = 69.99,
+    brand = "Levi's"
 },
 ["VA015"] = {
     name = "Playera Negra",
-    description = "Playera confeccionada en hilatura con mezcla de algodón. Cuello alto y manga larga."
+    description = "Playera confeccionada en hilatura con mezcla de algodón. Cuello alto y manga larga.",
+    price = 29.99,
+    brand = "Calvin Klein"
 },
 ["VA016"] = {
     name = "Playera Rib Cinturón",
-    description = "Playera confeccionada en hilatura con mezcla de algodón. Cuello redondo y manga larga con trabillas en hombros. Cinturón en tejido del mismo tono ajustable con botones. Tejido en rib."
+    description = "Playera confeccionada en hilatura con mezcla de algodón. Cuello redondo y manga larga con trabillas en hombros. Cinturón en tejido del mismo tono ajustable con botones. Tejido en rib.",
+    price = 34.99,
+    brand = "Zara"
 },
 ["VA017"] = {
     name = "Playera Verde Manga Larga",
-    description = "Playera confeccionada con algodón de cuello redondo y manga larga."
+    description = "Playera confeccionada con algodón de cuello redondo y manga larga.",
+    price = 27.99,
+    brand = "H&M"
 },
 ["VA018"] = {
     name = "Playera Asimétrica Drapeada Negra",
-    description = "Playera de escote asimétrico y manga larga. Detalle de tejido drapeado."
+    description = "Playera de escote asimétrico y manga larga. Detalle de tejido drapeado.",
+    price = 39.99,
+    brand = "Bershka"
 },
 ["VA019"] = {
     name = "Falda Bajo",
-    description = "Falda pantalón de tiro alto. Bajo con abertura frontal. Cierre lateral con zipper oculto en costura."
+    description = "Falda pantalón de tiro alto. Bajo con abertura frontal. Cierre lateral con zipper oculto en costura.",
+    price = 49.99,
+    brand = "Mango"
 },
 ["VA020"] = {
     name = "Pantalón Piel Wide",
-    description = "Pantalón realizado en tejido efecto piel. Tiro alto y cintura con trabillas. Pierna ancha. Cierre frontal con zipper, botón y gancho metálico."
+    description = "Pantalón realizado en tejido efecto piel. Tiro alto y cintura con trabillas. Pierna ancha. Cierre frontal con zipper, botón y gancho metálico.",
+    price = 89.99,
+    brand = "Zara"
 },
 ["VA021"] = {
     name = "Pantalón Tiro Medio",
-    description = "Pantalón de tiro medio confeccionado en hilatura con viscosa 19%. Cinturón ajustable con hebilla metálica. Pierna ancha. Cierre lateral con zipper oculto en costura."
+    description = "Pantalón de tiro medio confeccionado en hilatura con viscosa 19%. Cinturón ajustable con hebilla metálica. Pierna ancha. Cierre lateral con zipper oculto en costura.",
+    price = 69.99,
+    brand = "Massimo Dutti"
 },
 ["VA022"] = {
     name = "Pantalón Elástico Negro",
-    description = "Pantalón de tiro bajo con bolsillos delanteros y bolsillos de plastrón en espalda. Bajo en evasé. Cierre frontal con zipper y botón."
+    description = "Pantalón de tiro bajo con bolsillos delanteros y bolsillos de plastrón en espalda. Bajo en evasé. Cierre frontal con zipper y botón.",
+    price = 59.99,
+    brand = "H&M"
 },
 ["VA023"] = {
     name = "Leggins Vino",
-    description = "Leggins confeccionado con hilatura de algodón 100 %. Tiro medio y cintura elástica. Detalle con aplique de flor al frente combinada a contraste."
+    description = "Leggins confeccionado con hilatura de algodón 100 %. Tiro medio y cintura elástica. Detalle con aplique de flor al frente combinada a contraste.",
+    price = 44.99,
+    brand = "Lululemon"
 },
 ["VA024"] = {
     name = "Leggins Blanco",
-    description = "Leggins confeccionado con hilatura de algodón 100 %. Tiro medio y cintura elástica. Detalle con aplique de flor al frente combinada a contraste."
+    description = "Leggins confeccionado con hilatura de algodón 100 %. Tiro medio y cintura elástica. Detalle con aplique de flor al frente combinada a contraste.",
+    price = 44.99,
+    brand = "Nike"
 },
 ["VA025"] = {
     name = "Sudadera Polo Varsity",
-    description = "Sudadera de cuello alto con zipper y manga larga. Acabados en rib elástico. Detalle de texto en delantero."
+    description = "Sudadera de cuello alto con zipper y manga larga. Acabados en rib elástico. Detalle de texto en delantero.",
+    price = 74.99,
+    brand = "Ralph Lauren"
 },
 ["VA026"] = {
     name = "Pantalón Varsity Alto",
-    description = "Pantalón de tiro alto con cintura elástica ajustable con cordones. Bolsillos laterales. Texto y números combinados a contraste."
+    description = "Pantalón de tiro alto con cintura elástica ajustable con cordones. Bolsillos laterales. Texto y números combinados a contraste.",
+    price = 64.99,
+    brand = "Champion"
 }
 
 `;

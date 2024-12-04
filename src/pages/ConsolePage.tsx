@@ -480,7 +480,7 @@ export function ConsolePage() {
       <div className="content-top">
         <div className="content-title">
           <img src="/yalo-logo.svg" alt="Yalo" />
-          <span>realtime console</span>
+          <span>Sales Agent</span>
         </div>
         <div className="content-controls">
           <Toggle
